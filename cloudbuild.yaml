@@ -5,4 +5,4 @@ steps:
   - name: "gcr.io/cloud-builders/docker"
     args: ["build", "-t", "gcr.io/sodium-apex-229314/test:$TAG_NAME", "-f", "Dockerfile", "."]
 images:
-  - "gcr.io/sodium-apex-229314/gcp-cd-codelab:$TAG_NAME"
+  - "gcr.io/sodium-apex-229314/test:$TAG_NAME"
