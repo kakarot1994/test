@@ -1,0 +1,8 @@
+steps:
+  - name: "gcr.io/cloud-builders/go"
+    args: ["install", "github.com/kakarot1994/test"]
+    env: ["PROJECT_ROOT=github.com/kakarot1994/test"]
+  - name: "gcr.io/cloud-builders/docker"
+    args: ["build", "-t", "gcr.io/sodium-apex-229314/test:$TAG_NAME", "-f", "Dockerfile", "."]
+images:
+  - "gcr.io/sodium-apex-229314/gcp-cd-codelab:$TAG_NAME"
