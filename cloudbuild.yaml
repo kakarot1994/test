@@ -3,6 +3,6 @@ steps:
     args: ["install", "github.com/kakarot1994/test"]
     env: ["PROJECT_ROOT=github.com/kakarot1994/test"]
   - name: "gcr.io/cloud-builders/docker"
-    args: ["build", "-t", "gcr.io/sodium-apex-229314/test:$TAG_NAME", "-f", "Dockerfile", "."]
+    args: ["build", "-t", "gcr.io/deployments-1234/test:$TAG_NAME", "-f", "Dockerfile", "."]
 images:
-  - "gcr.io/sodium-apex-229314/test:$TAG_NAME"
+  - "gcr.io/deployments-1234/test:$TAG_NAME"
